@@ -16,8 +16,7 @@ const meta = {
                 devMiddleware: {
                     noInfo: 'If no info should be sent to the console.',
                     quiet: 'If nothing should be sent to the console.',
-                    poll: 'If polling should be enabled. It is the solution ' +
-                        'whenever you want a VM to notice changes made outside that VM.'
+                    poll: 'If polling should be enabled. [https://github.com/webpack/watchpack#api]'
                 },
                 hotMiddleware: {
                     reload: 'If the browser should be reloaded if it fails to hot update the code.',
