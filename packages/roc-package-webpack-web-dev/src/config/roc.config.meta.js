@@ -2,7 +2,8 @@ import {
     isString,
     isBoolean,
     isPath,
-    isArray
+    isArray,
+    oneOf
 } from 'roc/validators';
 
 const meta = {
@@ -37,7 +38,7 @@ const meta = {
                 devMiddleware: {
                     noInfo: isBoolean,
                     quiet: isBoolean,
-                    poll: isBoolean
+                    poll: oneOf(isBoolean, isString)
                 },
                 hotMiddleware: {
                     reload: isBoolean,
