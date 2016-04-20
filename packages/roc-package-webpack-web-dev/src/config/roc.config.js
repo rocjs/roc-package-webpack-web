@@ -3,7 +3,8 @@ const config = {
         dev: {
             devMiddleware: {
                 noInfo: true,
-                quiet: false
+                quiet: false,
+                poll: false
             },
             hotMiddleware: {
                 overlay: true,

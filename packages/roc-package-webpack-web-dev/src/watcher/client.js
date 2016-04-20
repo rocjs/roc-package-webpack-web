@@ -19,6 +19,7 @@ export default function client(compiler) {
         if (!compiler) {
             return reject(new Error('A compiler instance must be passed in order to watch client!'));
         }
+
         const devPort = getDevPort();
 
         const server = koa();
@@ -28,7 +29,10 @@ export default function client(compiler) {
                 // Let the publicPath be / since we want it to be based on the root of the dev server
                 publicPath: '/',
                 noInfo: devSettings.devMiddleware.noInfo,
-                quiet: devSettings.devMiddleware.quiet
+                quiet: devSettings.devMiddleware.quiet,
+                watchOptions: {
+                    poll: devSettings.devMiddleware.poll
+                }
             })
         );
 
