@@ -3,6 +3,7 @@ import {
     isBoolean,
     isPath,
     isArray,
+    isInteger,
     oneOf
 } from 'roc/validators';
 
@@ -16,7 +17,8 @@ const meta = {
                 devMiddleware: {
                     noInfo: 'If no info should be sent to the console.',
                     quiet: 'If nothing should be sent to the console.',
-                    poll: 'If polling should be enabled. [https://github.com/webpack/watchpack#api]'
+                    poll: 'If polling should be enabled. [https://github.com/webpack/watchpack#api]',
+                    aggregateTimeout: 'Fire aggregated events. [https://github.com/webpack/watchpack#api]'
                 },
                 hotMiddleware: {
                     reload: 'If the browser should be reloaded if it fails to hot update the code.',
@@ -37,7 +39,8 @@ const meta = {
                 devMiddleware: {
                     noInfo: isBoolean,
                     quiet: isBoolean,
-                    poll: oneOf(isBoolean, isString)
+                    poll: oneOf(isBoolean, isString),
+                    aggregateTimeout: isInteger
                 },
                 hotMiddleware: {
                     reload: isBoolean,

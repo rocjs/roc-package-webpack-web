@@ -4,7 +4,8 @@ const config = {
             devMiddleware: {
                 noInfo: true,
                 quiet: false,
-                poll: false
+                poll: false,
+                aggregateTimeout: undefined
             },
             hotMiddleware: {
                 overlay: true,

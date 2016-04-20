@@ -31,6 +31,7 @@ export default function client(compiler) {
                 noInfo: devSettings.devMiddleware.noInfo,
                 quiet: devSettings.devMiddleware.quiet,
                 watchOptions: {
+                    aggregateTimeout: devSettings.devMiddleware.aggregateTimeout,
                     poll: devSettings.devMiddleware.poll
                 }
             })
