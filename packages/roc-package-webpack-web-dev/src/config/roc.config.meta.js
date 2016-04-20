@@ -39,7 +39,7 @@ const meta = {
                 devMiddleware: {
                     noInfo: isBoolean,
                     quiet: isBoolean,
-                    poll: oneOf(isBoolean, isString),
+                    poll: oneOf(isBoolean, isInteger),
                     aggregateTimeout: isInteger
                 },
                 hotMiddleware: {
