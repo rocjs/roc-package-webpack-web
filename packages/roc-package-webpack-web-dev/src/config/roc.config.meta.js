@@ -1,3 +1,4 @@
+import automaticConverter from 'roc/converters/automatic';
 import {
     isString,
     isBoolean,
@@ -47,6 +48,14 @@ const meta = {
                     overlay: isBoolean,
                     noInfo: isBoolean,
                     quiet: isBoolean
+                }
+            }
+        },
+
+        converters: {
+            dev: {
+                devMiddleware: {
+                    poll: automaticConverter,
                 }
             }
         }
