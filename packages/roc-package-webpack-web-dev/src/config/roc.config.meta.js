@@ -55,7 +55,7 @@ const meta = {
         converters: {
             dev: {
                 devMiddleware: {
-                    poll: toBooleanOrInteger,
+                    poll: toBooleanOrInteger
                 }
             }
         }
