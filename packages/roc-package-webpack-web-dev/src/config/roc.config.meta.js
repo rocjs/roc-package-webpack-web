@@ -1,4 +1,4 @@
-import automaticConverter from 'roc/converters/automatic';
+import { toBooleanOrInteger } from 'roc/converters';
 import {
     isString,
     isBoolean,
@@ -55,7 +55,7 @@ const meta = {
         converters: {
             dev: {
                 devMiddleware: {
-                    poll: automaticConverter,
+                    poll: toBooleanOrInteger,
                 }
             }
         }
